@@ -1,0 +1,17 @@
+{
+  "name": "8-npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "dir",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muhammad Pauzi",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "validator": "^13.6.0"
+  }
+}
