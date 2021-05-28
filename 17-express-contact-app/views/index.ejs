@@ -1,0 +1,31 @@
+<%- include('layouts/header') %>
+    <%- include('layouts/nav') %>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>
+                        <%= title %>
+                    </h1>
+                    <h2>Hallo <strong>
+                            <%= name %>
+                        </strong></h2>
+
+                    <h4>User List</h4>
+                    <% if (users.length> 0) { %>
+                        <% users.forEach(user=> { %>
+                            <ul>
+                                <li>
+                                    Name : <%= user.name %>
+                                </li>
+                                <li>
+                                    Email : <%= user.email %>
+                                </li>
+                            </ul>
+                            <% }) %>
+                                <% } else { %>
+                                    <p>Users not found.</p>
+                                    <% } %>
+                </div>
+            </div>
+        </div>
+        <%- include('layouts/footer') %>
