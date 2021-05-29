@@ -19,26 +19,30 @@
                         </div>
                         <% } %>
 
-                            <form action="/contact/create" method="post">
+                            <form action="/contact/update" method="post">
+                                <input type="hidden" name="oldName"
+                                    value="<%= contact.data.oldName || contact.data.name %>">
+                                <input type="hidden" name="oldPhone"
+                                    value="<%= contact.data.oldPhone || contact.data.phone %>" %>">
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Name</label>
                                     <input type="text" class="form-control" id="name" name="name" required
-                                        value="<%= (contact) ? contact.data.name : '' %>">
+                                        value="<%= contact.data.name %>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email address</label>
                                     <input type="text" class="form-control" id="email" name="email" required
-                                        value="<%= (contact) ? contact.data.email : '' %>">
+                                        value="<%= contact.data.email %>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="phone" class="form-label">Phone number</label>
                                     <input type="text" class="form-control" id="phone" name="phone" required
-                                        value="<%= (contact) ? contact.data.phone : '' %>">
+                                        value="<%= contact.data.phone %>">
                                 </div>
 
                                 <div class="row">
                                     <div class="col">
-                                        <button type="submit" class="btn btn-primary px-3 mr-2">Create</button>
+                                        <button type="submit" class="btn btn-primary px-3 mr-2">Update</button>
                                         <a href="/contact" class="btn btn-light px-3">Back</a>
                                     </div>
                                 </div>

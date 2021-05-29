@@ -48,8 +48,13 @@
                                                         <%= contact.data.phone %>
                                                     </td>
                                                     <td>
-                                                        <a href="/contact/<%= contact.data.name.toLowerCase() %> "
+                                                        <a href="/contact/<%= contact.data.name.toLowerCase() %>"
                                                             class="btn btn-success btn-sm px-3">detail</a>
+                                                        <a href="/contact/delete/<%= contact.data.name.toLowerCase() %>"
+                                                            class="btn btn-danger btn-sm px-3"
+                                                            onclick="return confirm('Are you sure to delete this contact?');">delete</a>
+                                                        <a href="/contact/update/<%= contact.data.name.toLowerCase() %>"
+                                                            class="btn btn-warning btn-sm px-3">update</a>
                                                     </td>
                                                 </tr>
                                                 <% }) %>

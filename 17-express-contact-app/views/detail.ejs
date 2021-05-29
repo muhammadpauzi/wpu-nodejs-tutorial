@@ -25,9 +25,10 @@
                                         <%= contact.data.email %>
                                     </p>
                                     <p class="card-text">
-                                        Created at : <strong>
-                                            <%= contact.created_at %>
-                                        </strong>
+                                        Created at : <%= contact.created_at %>
+                                    </p>
+                                    <p class="card-text">
+                                        Updated at : <%= contact.updated_at || "Not updated yet." %>
                                     </p>
                                     <a href="/contact" class="card-link">Back to Contact List</a>
                                 </div>
